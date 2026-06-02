@@ -1,9 +1,9 @@
 // app/api/score/route.js
 // Endpoint principal — reçoit les réponses quiz, renvoie le TOP
 
-import { getRaquettes, updateCustomerProfile } from '@/lib/shopify'
-import { scoreRaquettes } from '@/lib/scoring'
-import { identifyProfile, trackQuizComplete } from '@/lib/klaviyo'
+import { getRaquettes, updateCustomerProfile } from '../../lib/shopify'
+import { scoreRaquettes } from '../../lib/scoring'
+import { identifyProfile, trackQuizComplete } from '../../lib/klaviyo'
 
 export async function POST(request) {
   try {
