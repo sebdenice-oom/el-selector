@@ -10,7 +10,7 @@ export async function GET(request) {
   }
 
   try {
-    const { getVentesParProduit, getRaquettes, updateRotation } = require('@/lib/shopify')
+    const { getVentesParProduit, getRaquettes, updateRotation } = require('../../lib/shopify')
 
     // Récupère les ventes des 90 derniers jours via ShopifyQL
     const ventesMap = await getVentesParProduit()
