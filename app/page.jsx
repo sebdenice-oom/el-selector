@@ -74,10 +74,11 @@ export default function QuizPage() {
   function valeurActuelle() { return reponses[etapeActuelle.id] }
 
   function peutContinuer() {
-    if (etapeActuelle.type === 'email') return true
-    if (etapeActuelle.type === 'ranked_chips') return (reponses.sensation || []).length >= 1
-    return !!valeurActuelle()
-  }
+  if (etapeActuelle.type === 'email') return true
+  if (etapeActuelle.type === 'slider') return true
+  if (etapeActuelle.type === 'ranked_chips') return (reponses.sensation || []).length >= 1
+  return !!valeurActuelle()
+}
 
   async function suivant() {
     if (etape < ETAPES.length - 1) { setEtape(e => e + 1); return }
