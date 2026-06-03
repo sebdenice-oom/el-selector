@@ -8,9 +8,9 @@ const ETAPES = [
     titre: 'Tu es ?',
     type: 'chips',
     options: [
-      { value: 'Homme', label: '🎾 Homme' },
-      { value: 'Femme', label: '🎾 Femme' },
-      { value: 'Junior', label: '🌟 Junior' },
+      { value: 'Homme', label: '🏃‍♂️ Homme' },
+      { value: 'Femme', label: '🏃‍♀️ Femme' },
+      { value: 'Junior', label: '🧒 Enfant' },
     ],
   },
   {
@@ -24,12 +24,7 @@ const ETAPES = [
       { value: 'competition',   label: 'Compétition',    icon: '🥇' },
     ],
   },
-  {
-    id: 'budget',
-    titre: 'Ton budget maximum',
-    type: 'slider',
-    min: 50, max: 350, step: 10, default: 150,
-  },
+  { id: 'budget', titre: 'Ton budget maximum', type: 'slider', min: 50, max: 750, step: 10, default: 150 },,
   {
     id: 'sensation',
     titre: 'Tes critères importants',
