@@ -4,15 +4,15 @@ import { useRouter } from 'next/navigation'
 
 const ETAPES = [
   {
-    id: 'genre',
-    titre: 'Tu es ?',
-    type: 'chips',
-    options: [
-      { value: 'Homme', label: '🏃‍♂️ Homme' },
-      { value: 'Femme', label: '🏃‍♀️ Femme' },
-      { value: 'Junior', label: '🧒 Enfant' },
-    ],
-  },
+  id: 'genre',
+  titre: 'Tu es ?',
+  type: 'level_cards',
+  options: [
+    { value: 'Homme', label: 'Homme', image: 'https://cdn.shopify.com/s/files/1/0430/1861/6996/files/Homme.png?v=1780521845' },
+    { value: 'Femme', label: 'Femme', image: 'https://cdn.shopify.com/s/files/1/0430/1861/6996/files/image_2026-06-03_232351053.png?v=1780521834' },
+    { value: 'Junior', label: 'Enfant', icon: '🧒' },
+  ],
+},
   {
     id: 'niveau',
     titre: 'Quel est ton niveau de jeu ?',
