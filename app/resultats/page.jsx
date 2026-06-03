@@ -166,11 +166,14 @@ export default function ResultatsPage() {
         {quiz && (
           <div style={{ display: 'flex', gap: 8, justifyContent: 'center', flexWrap: 'wrap' }}>
             {[
-              quiz.genre,
-              LABEL_NIVEAU[quiz.niveau],
-              `${quiz.budget}€ max`,
-              LABEL_SENSATION[quiz.sensation],
-            ].map(tag => (
+  quiz.genre,
+  LABEL_NIVEAU[quiz.niveau],
+  `${quiz.budget}€ max`,
+  ...(Array.isArray(quiz.sensation)
+    ? quiz.sensation.map((s, i) => `${i + 1}. ${LABEL_SENSATION[s]}`)
+    : [LABEL_SENSATION[quiz.sensation]]
+  ),
+].map(tag => (
               <span key={tag} style={{
                 fontSize: 12, padding: '4px 12px',
                 background: 'rgba(0,232,122,0.1)',
