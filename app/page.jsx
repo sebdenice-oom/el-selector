@@ -214,7 +214,7 @@ export default function QuizPage() {
                     selectionner(opt.value)
                     setTimeout(avancer, 200)
                   }}>
-                  <div className="level-card-icon">{opt.icon}</div>
+                  {opt.image ? <img src={opt.image} alt={opt.label} style={{ width: 90, height: 90, objectFit: 'contain', marginBottom: 4 }} /> : <div className="level-card-icon">{opt.icon}</div>}
                   <div className="level-card-label">{opt.label}</div>
                 </button>
               )
