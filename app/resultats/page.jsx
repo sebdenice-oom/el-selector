@@ -69,9 +69,15 @@ function RaquetteCard({ raquette, rank }) {
                 {raquette.poids}
               </span>
             )}
-            <span style={{ fontFamily: 'Nunito, sans-serif', fontSize: 11, fontWeight: 700, background: '#F0FAF4', color: '#1D9E75', padding: '3px 9px', borderRadius: 8 }}>
-              En stock
-            </span>
+            {raquette.precommande ? (
+  <span style={{ fontFamily: 'Nunito, sans-serif', fontSize: 11, fontWeight: 700, background: '#FEF5E0', color: '#9A6B00', padding: '3px 9px', borderRadius: 8, border: '1px solid #F6BC3E' }}>
+    🔜 Précommande
+  </span>
+) : (
+  <span style={{ fontFamily: 'Nunito, sans-serif', fontSize: 11, fontWeight: 700, background: '#F0FAF4', color: '#1D9E75', padding: '3px 9px', borderRadius: 8 }}>
+    ✓ En stock
+  </span>
+)}
           </div>
 
           {/* Lien produit — toujours visible */}
