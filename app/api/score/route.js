@@ -47,6 +47,7 @@ export async function POST(request) {
       imageAlt: r.imageAlt,
       price: r.price,
       stock: r.stock,
+      precommande: r.precommande || false,
       genre: r.genre,
       poids: r.poids,
       schema: r.schema,
